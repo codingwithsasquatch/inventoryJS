@@ -1,0 +1,32 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "authLevel": "function",
+      "name": "req",
+      "type": "httpTrigger",
+      "direction": "in"
+    },
+    {
+      "name": "inventoryStatus",
+      "type": "table",
+      "tableName": "inventory",
+      "partitionKey": "products",
+      "rowKey": "1",
+      "connection": "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING",
+      "direction": "in"
+    },
+    {
+      "tableName": "inventory",
+      "connection": "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING",
+      "name": "inventory",
+      "type": "table",
+      "direction": "out"
+    },
+    {
+      "name": "$return",
+      "type": "http",
+      "direction": "out"
+    }
+  ]
+}
